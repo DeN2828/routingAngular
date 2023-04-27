@@ -1,0 +1,19 @@
+<div class="container">
+  <div>
+    <label for="speed-input">Скорость (км/ч): </label>
+    <input id="speed-input" type="number" [(ngModel)]="speed" (ngModelChange)="calculate()">
+  </div>
+  <div>
+    <label for="reaction-input">Время реакции (с): </label>
+    <input id="reaction-input" type="number" [(ngModel)]="reactionTime" (ngModelChange)="calculate()">
+  </div>
+  <div>
+    <label for="friction-input">Коэффициент трения: </label>
+    <input id="friction-input" type="number" step="0.01" [(ngModel)]="friction" (ngModelChange)="calculate()">
+  </div>
+  <div>
+    <h3>Результат:</h3>
+    <p>Тормозной путь: {{brakingDistance.toFixed(2)}} м</p>
+  </div>
+</div>
+  

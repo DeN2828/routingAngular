@@ -1,0 +1,14 @@
+<div class="container">
+  <div>
+    <label for="distance-input">Расстояние (км): </label>
+    <input id="distance-input" type="number" [(ngModel)]="distance" (ngModelChange)="calculate()">
+  </div>
+  <div>
+    <label for="fuel-input">Расход топлива (л/100км): </label>
+    <input id="fuel-input" type="number" step="0.01" [(ngModel)]="fuelConsumption" (ngModelChange)="calculate()">
+  </div>
+  <div>
+    <h3>Результат:</h3>
+    <p>Расход топлива: {{fuel.toFixed(2)}} л</p>
+  </div>
+</div>
